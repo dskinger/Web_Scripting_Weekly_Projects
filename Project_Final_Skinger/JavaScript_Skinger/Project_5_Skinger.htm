@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!This Derrick SKinger's Project 5 Javascript 1 webpage.>
+
+<htm>
+<head>
+
+<Title> Project 5 - Derrick Skinger.htm </title>
+
+<link rel="stylesheet" type="text/css" href="Proj5_CSS.css" /> <!My extrenal CSS file>
+
+<script type="text/Javascript">
+
+// Delcare Global Variables
+var Quanity		// Input Variable
+var It_Price		// Input Variable
+
+var Item_Code		// Input/Output Variable
+var Items_Color		// Input/Output Variable
+
+var Total_Price		// Output Variable
+var Tax_Amount		// Output Variable
+var Amount_Due		// Output Variable
+
+//*********Calc_Total_Price***************
+
+function Calc_Total_Price()
+{
+	
+// The following line is a Popup Message Box
+
+alert("From Begining of Calc_Total_Price()");
+
+// Retrieve User Input
+
+Quanity = parseFloat(document.materials.txtIt_Quanity.value);
+
+It_Price = parseFloat(document.materials.txtIt_Price.value);
+
+// Calculate Total Price
+Total_Price = Quanity * It_Price;
+
+//Display Result
+document.materials.txtTotal_Price.value =  "$" + Total_Price.toFixed(2);
+
+}       // End of Calc_Total_Price Function
+
+//***********Item_Display***************
+
+function Item_Display()
+{
+
+// The following line is Popup Message Box
+
+alert("From Begining of Item_Display()");
+
+// Retrieve User Input
+
+Item_Code = parseFloat(document.materials.txtIt_Code.value);
+
+Items_Color = parseFloat(document.materials.txtIt_Color.value);
+
+// Display User Input
+
+document.materials.txtItCode.value = Item_Code
+
+document.materials.txtItColor.value = Items_Color
+
+}	// End of Item_Display
+
+//**********Calc_Tax_Amount*************
+
+function Calc_Tax_Amount()
+{
+
+// The following line is a Popup Message Box
+
+alert("From Begining of Calc_Tax_Amount()");
+
+// Calculate Tax Amount
+
+Tax_Amount = Total_Price * 0.07
+
+// Display Result
+
+document.materials.txtTax_Amount.value = "$" + Tax_Amount.toFixed(2);
+
+}	// End of Calc_Tax_Amount
+
+//**********Calc_Amount_Due*************
+
+function Calc_Amount_Due()
+{
+
+// The following is a Popup Message Box
+
+alert("From Begining of Calc_Amount_Due()");
+
+// Calculate Amount Due
+
+Amount_Due = Total_Price + Tax_Amount
+
+// Display Result
+
+document.materials.txtAmount_Due.value = Amount_Due
+
+}	// End of Calc_Amount_Due
+
+</Script>
+</head>
+
+<body>
+
+<h2> Calculating Combined Cost of Materials </h2>
+
+<form Name="materials" action="">
+ 
+<fieldset>
+   <legend>Input Data</legend>
+   <p>Item Code:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Code" size="10" />&nbsp&nbsp
+   Item Name:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Name" size="20" />&nbsp&nbsp
+   Items Color:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Color" size="10" />&nbsp&nbsp
+   Item Size:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Size" size="10" />&nbsp&nbsp<br>
+   Quanity:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Quanity" size="10" />&nbsp&nbsp<br>
+   Unit Price:
+	<input style="font: bold 18px Arial" type="text" name="txtIt_Price" size="10" />&nbsp&nbsp
+</p>
+</fieldset>
+
+<fieldset>
+   <legend>Output Data</legend>
+   <p>Item Code
+	<input style="font: bold 18px Arial" type="text" name="txtItCode" size="10" />&nbsp&nbsp
+   Item Color
+	<input style="font: bold 18px Arial" type="text" name="txtItColor" size="10" /><br>
+   Total Price
+	<input style="font: bold 18px Arial" type="text" name="txtTotal_Price" size="10" /><br>
+   Tax Amount
+	<input style="font: bold 18px Arial" type="text" name="txtTax_Amount" size="10" /><br>
+   Amount Due
+	<input style="font: bold 18px Arial" type="text" name="txtAmount_Due" size="10" />&nbsp&nbsp
+</p>
+</fieldset>
+<br><br>
+
+<input style="font: bold 18px Arial" type="button" name="btnTotal_Price"  value="Calculate Total Price" size="15" onClick="Calc_Total_Price(Item_Display())" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="button" name="btnTax_Amount"  value="Calculate Tax Amount" size="15" onClick="Calc_Tax_Amount()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="button" name="btnAmount_Due"  value="Calculate Amount Due" size="15" onClick="Calc_Amount_Due()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="reset" name="btnClear"  value="Clear" size="15" onClick="Calc_()" />
+
+</form>
+
+</body>
+</html>

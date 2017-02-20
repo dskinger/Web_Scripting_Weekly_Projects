@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="Proj4_CSS.css" />
+
+<style type="text/css">
+
+   body { background-color: pink; }
+
+   h2 { color: green; text-align: left; }
+
+   legend  { color: red; font-size: 18pt; }
+
+   p  { font-size: 14pt; color: black; }
+
+</style>
+</head>
+
+<body style= "background-color: pink">
+
+<h2 style="color: green">
+    Derrick Skinger</h2>
+
+<h2 style="color: green">
+    Project 4A</h2>
+
+<form Name="frmperson" action="">
+
+<fieldset>
+   <legend style="color: Red"; style="text-size: 18pt">Basic Information</legend>
+   First Name: <input type="text" name="txtfirst_Name" size="25" maxlength="20" />
+   Middle Intial: <input type="text" name="txtmiddle_Name" size="5" maxlength="5" />
+   Last Name: <input type="text" name="txtlast_Name" size="25" maxlength="20" />
+   <br></br>
+   E-mail: <input type="text" name="txte-mail" size="40" maxlength="30" />
+   <br></br>
+   <input type="radio" name="radgender" value="male" /> Male
+   <input type="radio" name="radgender" value="female" /> Female<br />
+</fieldset>
+
+<br></br>
+
+<fieldset>
+   <legend style="color: Red"; style="text-size: 18pt">Likes and Intrests</legend>
+   Which type(s) of food do you like to eat? 
+   <input type="checkbox" name="chkItalian" value="Ital" /> Italian
+   <input type="checkbox" name="chkMexican" value="Mexi" /> Mexican
+   <input type="checkbox" name="chkGerman" value="Germ" /> German
+   <input type="checkbox" name="chkFrench" value="Fren" /> French
+   <br></br>
+   What are you intrested in ?
+   <input type="checkbox" name="chkSports" value="Sport" /> Sports
+   <input type="checkbox" name="chkTraveling" value="Travel" /> Traveling
+   <input type="checkbox" name="chkReading" value="Read" /> Reading
+   <input type="checkbox" name="chkMusic" value="Music" /> Music
+</fieldset>
+
+<br></br>
+<input type="button" name="btnProcess" value="Process" />
+<input type="reset" name="rstClear" value="Clear" />
+
+</form>
+</body>
+</html>

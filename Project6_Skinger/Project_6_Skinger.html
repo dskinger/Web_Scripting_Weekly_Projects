@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!This Derrick Skinger's Project 6 for Web Scripting Languages.>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Proj6_CSS.css" /> <!My extrenal CSS file>
+
+<script type="text/Javascript">
+
+// Declare Global Variables
+
+var city = "";		//Input/Output Variable
+var celcius = 0;	//Input/Output Variable
+var fahrenheit = 0;	//Output Variable
+
+//-----------Retrieve Input Module------------------
+
+function Retrieve_Input()
+{
+
+// The following line is a Popup Message Box
+
+alert ("I made it to input module");
+
+// Retrieve City name
+city = (document.Convert.txtCity_Name.value);
+
+// Retrieve Celcius
+celcius = parseFloat(document.Convert.txtTemp_C.value);
+
+}
+
+//-----------Display Output Module------------------
+
+function Display_Output()
+{
+
+// The following line is a Popup Message
+
+alert ("I made it to display output");
+
+// Display City name
+document.Convert.txtCity_Names.value= city
+
+// Display Tempeture in Celcius
+document.Convert.txtTemp_Cel.value= celcius
+
+// Display Tempeture in Fahrenheit
+document.Convert.txtTemp_Fah.value= fahrenheit
+
+}
+
+//-----------Calc_Temp Module-----------------------
+
+function Calc_Temp()
+{
+
+// The following line is  a Popup Message
+alert ("I did the Calculation");
+
+// Do the Calculation
+
+fahrenheit = (9/5 * celcius) + 32;
+
+}
+
+//***********Calc_Main Module***********************
+
+function Calc_Main()
+{
+
+// The following line is a Popup Message
+alert ("I made it to Calc_Main");
+
+// Retrieve Input
+
+Retrieve_Input();
+
+// Do Calculation
+
+Calc_Temp();
+
+// Display Output
+
+Display_Output();
+
+}
+
+
+</script>
+</head>
+
+<body>
+
+<h2> Tempeture Converter </h2>
+
+<form Name="Convert" action="">
+ 
+<fieldset>
+   <legend>Input Data</legend>
+   <p>City Name:
+	<input style="font: bold 18px Arial" type="text" name="txtCity_Name" size="10" />&nbsp&nbsp
+   Tempeture in Celsius:
+	<input style="font: bold 18px Arial" type="text" name="txtTemp_C" size="10" />&nbsp&nbsp
+   </p>
+</fieldset>
+
+<br>
+
+<fieldset>
+   <legend>Output Data</lengend>
+   <p>City Name:
+	<input style="font: bold 18px Arial" type="text" name="txtCity_Names" size="10" />&nbsp&nbsp
+   Tempeture in Celsius:
+	<input style="font: bold 18px Arial" type="text" name="txtTemp_Cel" size="10" />&nbsp&nbsp
+   Tempeture in Fahrenheit:
+	<input style="font: bold 18px Arial" type="text" name="txtTemp_Fah" size="10" />&nbsp&nbsp
+   </p>
+</fieldset>
+
+<input style="font: bold 18px Arial" type="button" name="btnConvert"  value="Convert Tempeture" size="15" onClick="Calc_Main()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="reset" name="btnClear"  value="Clear" size="15" onClick="Calc_()" />
+
+</form>
+</body>
+</html>

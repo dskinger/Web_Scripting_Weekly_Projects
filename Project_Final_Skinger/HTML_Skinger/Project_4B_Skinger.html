@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" type="text/css" href="Proj4_CSS.css" />
+
+<style type="text/css">
+
+   body { background-color: pink; }
+
+   h2 { color: green; text-align: left; }
+
+   legend  { color: red; font-size: 20pt; }
+
+   p  { font-size: 14pt; color: black; }
+
+</style>
+</head>
+
+<body style= "background-color: pink">
+
+<h2 style="color: green">
+    Derrick Skinger</h2>
+
+<h2 style="color: green">
+    Project 4B</h2>
+
+<form Name= "frmInfo" action="">
+
+<fieldset>
+   <legend>Academic Information</legend>
+   <p style= "font-size: 14pt">College Name: 
+   <select name= "lstCollege">
+	<option name="optCollege" value="CCAC"> CCAC </option>
+	<option name="optCollege" value="CCBC"> CCBC </option>
+	<option name="optCollege" value="Geneva"> Geneva College </option>
+	<option name="optCollege" value="Penn" Selected="Selected"> Penn State </option>
+	<option name="optCollege" value="Pitt"> Pitt University </option>
+   </select>
+
+   Major Name:
+   <select name= "lstMajor">
+	<option name="optMajor" value="Accounting"> Accounting </option>
+	<option name="optMajor" value="Criminal Justice"> Criminal Justice </option>
+	<option name="optMajor" value="Networking"> Networking </option>
+	<option name="optMajor" value="Nursing"> Nursing </option>
+	<option name="optMajor" value="Web Programming" Selected="selected"> Web Programming </option>
+   </select>
+   </p>
+
+   <br>
+   
+   <p style= "font-size: 14pt">Academic Level:
+	<input type="radio" name="radLevel" value="First" /> First Semester
+	<input type="radio" name="radLevel" value="Second" /> Second Semester
+	<input type="radio" name="radLevel" value="Third" /> Third Semester
+	<input type="radio" name="radLevel" value="Fourth" /> Fourth Semester
+   </p>
+
+   <p style= "font-size: 14pt">What are you planning to do when you graduate college?<br>
+      <textarea name="txtareaComment" rows="5" cols="150" maxlength="400"></textarea>
+   </p>
+</fieldset>
+
+<br>
+<input type="button" name="btnProcess" value="Process" />
+<input type="reset" name="rstClear" value="Clear" />
+
+</form>
+</body>
+</html>

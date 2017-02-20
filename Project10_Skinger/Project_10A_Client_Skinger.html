@@ -1,0 +1,41 @@
+<!DOCTYPE Html>
+<!This is Derrick Skinger's Project 10A PHP part 2 Client Side project.>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Project10_CSS.css" /> <!My extrenal CSS file>
+
+</head>
+
+<body>
+
+<h2> Your Information </h2>
+
+<form Name="Info" action="Project_10A_Server_Skinger.php" method="post" >
+ 
+<fieldset>
+   <legend>Input Data</legend>
+   <p>Username:
+	<input style="font: bold 18px Arial" type="text" name="txtUser_Name" size="10" />&nbsp&nbsp
+   Your Gender:
+	<input style="font: bold 18px Arial" type="text" name="txtGender" size="10" />&nbsp&nbsp
+   Marital Status:
+	<select Name="lstMarital">
+	  <option value="S"> S </option>
+	  <option value="M"> M </option>
+	  <option value="D"> D </option>
+	  <option value="W"> W </option>
+	</select> 
+   </p>
+</fieldset>
+
+<br/>
+
+<input style="font: bold 18px Arial" type="submit" name="btnProcess"  value="Process" size="15" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="reset" name="btnClear"  value="Clear" size="15" />&nbsp&nbsp
+
+</form>
+
+</body>
+</html>

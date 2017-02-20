@@ -1,0 +1,195 @@
+<!DOCTYPE Html>
+<!This is Derrick Skinger's Project 8C Javascript part 4 html project.>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Project_8_CSS.css" /> <!My extrenal CSS file>
+
+<script type="text/Javascript">
+
+// Declare Global Variables
+
+var Name = "";		// Input/Output Variable
+var ID = "";		// Input/Output Variable
+var Test1 = "";		// Input Variable
+var Test2 = "";		// Input Variable
+var Test3 = "";		// Input Variable
+var Total = "";		// Output Variable
+var Average = "";	// Output Variable
+var Letter = "";	// Output Variable
+
+//----------Input Module----------
+function Retrieve_Input()
+{
+
+//Popup Message
+alert ("I made it to input module");
+
+// Retrieve Student name
+Name = (document.grades.txtStudent_Name_In.value);
+
+// Retrieve ID
+ID = (document.grades.txtStudent_ID_In.value);
+
+// Retrieve Test Grades
+Test1 = parseInt(document.grades.txtGrade_1.value);
+Test2 = parseInt(document.grades.txtGrade_2.value);
+Test3 = parseInt(document.grades.txtGrade_3.value);
+}
+
+//**********Calculate_Total*********
+function Calculate_Total()
+{
+
+// Popup Message
+alert ("Calculate Total")
+
+// Retrieve Input
+Retrieve_Input();
+
+// Calculation
+Total = Test1 + Test2 + Test3;
+
+// Display Output
+Display_Output();
+}
+
+//**********Calculate_Average**********
+function Calculate_Average()
+{
+
+// Popup Message
+alert ("Calculate Average")
+
+// Retrieve Input
+Retrieve_Input();
+alert (Total)
+// Calculation
+Average = Total/3;
+
+alert (Average)
+
+// Display Output
+Display_Output();
+}
+
+//**********Determine_Letter_Grade**********
+function Determine_Letter_Grade()
+{
+// Popup Message
+alert ("Determine Letter")
+alert (Average);
+
+// if Statements
+if ((Average <= 100) && (Average >= 90))
+  {
+   Letter = "A";
+  }
+
+if ((Average <= 89) && (Average >= 80))
+  {
+   Letter = "B";
+  }
+
+if ((Average <= 79) && (Average >= 70))
+  {
+   Letter = "C";
+  }
+
+if ((Average <= 69) && (Average >= 60))
+  {
+   Letter = "D";
+  }
+
+if ((Average <= 59) && (Average >= 0))
+  {
+   Letter = "F";
+  }
+if ((Average > 100) || (Average < 0))
+  {
+  alert ("Invalid")
+   Letter = "Invaild Input";
+  }
+alert (Average)
+alert (Letter)
+// Display Output
+Display_Output();
+}
+
+//----------Output Module----------
+function Display_Output()
+{
+
+// Popup Message
+alert ("I made it to Display Module")
+
+// Display Student name
+document.grades.txtStudent_Name.value = Name;
+
+// Display ID
+document.grades.txtStudent_ID.value = ID;
+
+// Display Total
+document.grades.txtT_T_Grade.value = Total;
+
+// Display Average
+document.grades.txtAverage_Grade.value = Average;
+
+// Display Letter
+document.grades.txtLetter_Grade.value = Letter;
+}
+
+</script>
+</head>
+
+<body>
+
+<h2> Your Grades </h2>
+
+<form name="grades" action="">
+
+<fieldset>
+  <legend> Input Data </legend>
+  <p>Student Name:
+	<input style="font: bold 18px Arial" type="text" name="txtStudent_Name_In" size="10" />&nbsp&nbsp
+   Student ID:
+	<input style="font: bold 18px Arial" type="text" name="txtStudent_ID_In" size="10" />&nbsp&nbsp
+   Your Major:
+	<input style="font: bold 18px Arial" type="text" name="txtMajor" size="10" />&nbsp&nbsp <br></br>
+   Test 1 Grade:
+	<input style="font: bold 18px Arial" type="text" name="txtGrade_1" size="5" />&nbsp&nbsp
+   Test 2 Grade:
+	<input style="font: bold 18px Arial" type="text" name="txtGrade_2" size="5" />&nbsp&nbsp
+   Test 3 Grade:
+	<input style="font: bold 18px Arial" type="text" name="txtGrade_3" size="5" />&nbsp&nbsp
+   </p>
+</fieldset>
+
+<fieldset>
+  <legend> Output Data </legend>
+  <p>Student Name:
+	<input style="font: bold 18px Arial" type="text" name="txtStudent_Name" size="10" />&nbsp&nbsp
+   Student ID:
+	<input style="font: bold 18px Arial" type="text" name="txtStudent_ID" size="10" />&nbsp&nbsp <br></br>
+   Total Test Grades:
+	<input style="font: bold 18px Arial" type="text" name="txtT_T_Grade" size="10" />&nbsp&nbsp
+   Average Grade:
+	<input style="font: bold 18px Arial" type="text" name="txtAverage_Grade" size="10" />&nbsp&nbsp
+   Letter Grade:
+	<input style="font: bold 18px Arial" type="text" name="txtLetter_Grade" size="10" />&nbsp&nbsp
+  </p>
+</fieldset>
+
+<br></br>
+
+<input style="font: bold 18px Arial" type="button" name="btnTotal"  value="Calculate Total Test Grades" size="15" onClick="Calculate_Total()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="button" name="btnLetter"  value="Calculate Average Grade" size="15" onClick="Calculate_Average()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="button" name="btnAverage"  value="Calculate Letter Grade" size="15" onClick="Determine_Letter_Grade()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="reset" name="btnClear"  value="Clear" size="15" onClick="" />&nbsp&nbsp
+
+
+</body>
+</html>

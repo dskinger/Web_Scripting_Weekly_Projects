@@ -1,0 +1,153 @@
+<!DOCTYPE Html>
+<!This is Derrick Skinger's Project 8B Javascript part 3 html project.>
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Project_8_CSS.css" /> <!My extrenal CSS file>
+
+<script type="text/Javascript">
+
+//Declare Global variable
+alert ("hi")
+var First = "";			//Input/Output Variable
+var Gender = "";		//Input/Output Variable
+var Status = "";		//Input Variable
+var Status2 ="";		//Output Variable
+var Definition = "";		//Output Variable
+
+//----------Input Module----------
+
+function Retrieve_Input()
+{
+
+//Popup Message
+alert ("I made it to input module");
+
+// Retrieve First name
+First = (document.Info.txtFirst_Name.value);
+
+// Retrieve Gender
+Gender = (document.Info.txtGender.value);
+
+// Retrieve Status
+Status = (document.Info.txtMarital_S.value);
+
+}
+
+//----------Determine_Definition----------
+
+function Determine_Definition()
+{
+
+// Popup Message
+alert ("I made it to Determine Definition");
+
+// Switch statements
+   switch (Status)
+   {
+	case "S":
+	case "s":
+	   Status2 = "S";
+	   Definition = "Single";
+	   break;
+	case "M":
+	case "m":
+	   Status2 = "M";
+	   Definition = "Married";
+	   break;
+	case "D":
+	case "d":
+	   Status2 = "D";
+	   Definition = "Divorced";
+	   break;
+	case "W":
+	case "w":
+	   Status2 = "W";
+	   Definition = "Widowed";
+	   break;
+	default:
+	   alert ("Invalid Input");
+	   Status2 = Status;
+	   Definition = "Invalid Input";
+   }
+}
+
+//----------Output Module----------
+function Display_Output()
+{
+
+//Popup Message
+alert ("I made it to Display Output")
+
+// Display
+
+document.Info.txtOut_First.value = First
+
+document.Info.txtOut_Gender.value = Gender
+
+document.Info.txtM_S_Letter.value = Status2
+
+document.Info.txtM_S_Definition.value = Definition
+
+}
+
+//**********Complete_Function**********
+function Complete_Function()
+{
+
+//Retrieve Input
+Retrieve_Input();
+
+// Determine Definition
+Determine_Definition();
+
+//Retrieve Output
+Display_Output();
+
+}
+
+</script>
+</head>
+
+<body>
+
+<h2> Your Information </h2>
+
+<form Name="Info" action="">
+ 
+<fieldset>
+   <legend>Input Data</legend>
+   <p>First Name:
+	<input style="font: bold 18px Arial" type="text" name="txtFirst_Name" size="10" />&nbsp&nbsp
+   Last Name:
+	<input style="font: bold 18px Arial" type="text" name="txtLast_Name" size="10" />&nbsp&nbsp
+   Your Gender:
+	<input style="font: bold 18px Arial" type="text" name="txtGender" size="10" />&nbsp&nbsp
+   Marital Status Letter:
+	<input style="font: bold 18px Arial" type="text" name="txtMarital_S" size="10" />&nbsp&nbsp
+   </p>
+</fieldset>
+
+<br/>
+
+<fieldset>
+   <legend>Output Data</legend>
+   <p> Your First Name:
+	<input style="font: bold 18px Arial" type="text" name="txtOut_First" size="10" />&nbsp&nbsp
+   Your Gender:
+	<input style="font: bold 18px Arial" type="text" name="txtOut_Gender" size="10" />&nbsp&nbsp
+   Marital Status Letter:
+	<input style="font: bold 18px Arial" type="text" name="txtM_S_Letter" size="5" />&nbsp&nbsp
+   Marital Status Definition:
+	<input style="font: bold 18px Arial" type="text" name="txtM_S_Definition" size="10" />&nbsp&nbsp
+  </p>
+</fieldset>
+
+<br/>
+
+<input style="font: bold 18px Arial" type="button" name="btnProcess"  value="Process" size="15" onClick="Complete_Function()" />&nbsp&nbsp
+
+<input style="font: bold 18px Arial" type="reset" name="btnClear"  value="Clear" size="15" onClick="" />&nbsp&nbsp
+
+</body>
+</html>
